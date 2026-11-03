@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Vibe Check — Lesson 2</title>
+  
+  <!-- Web Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- External CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="cloud-tags">
+      <span class="tag-vercel">▲ Vercel (Frontend)</span>
+      <span class="tag-render">⚡ Render (Backend)</span>
+    </div>
+    <h1>Spotify Vibe Check</h1>
+    <p class="subtitle">Fetching real-time music from your Render server</p>
+  </div>
+
+  <!-- Backend Configuration Box -->
+  <div class="config-box">
+    <div class="config-label">
+      <span>🌐 Render Backend URL:</span>
+      <span id="save-msg" style="color: var(--spotify-green); display: none;">Saved!</span>
+    </div>
+    <div class="config-row">
+      <input type="text" id="backend-input" class="config-input" placeholder="http://localhost:3000 or https://your-app.onrender.com" />
+      <button class="btn-save-url" onclick="saveBackendUrl()">Set URL</button>
+    </div>
+  </div>
+
+  <!-- Architecture Flow Visualizer -->
+  <div class="arch-bar">
+    <div class="arch-node">
+      <span>▲</span> Vercel
+    </div>
+    <div class="arch-arrow" id="arrow">
+      ➔ HTTP Request ➔
+    </div>
+    <div class="arch-node">
+      <span class="badge-status"></span>
+      <span>⚡</span> Render Backend
+    </div>
+  </div>
+
+  <!-- Music Player Card -->
+  <div class="player-card">
+    
+    <!-- Album Art & Vibe Tag -->
+    <div class="album-art-wrapper">
+      <div class="album-art" id="album-cover">
+        🎧
+      </div>
+      <div class="vibe-tag" id="vibe-tag">
+        ✨ Ready for Music
+      </div>
+    </div>
+
+    <!-- Song Info -->
+    <div class="track-details">
+      <div class="track-title" id="song-title">Music Server</div>
+      <div class="track-artist" id="song-artist">Click shuffle to fetch a live song!</div>
+      <div class="track-meta">
+        <span id="song-album">💿 Album: —</span>
+        <span id="song-year">📅 —</span>
+      </div>
+    </div>
+
+    <!-- Progress Bar Decoration -->
+    <div class="progress-bar-container">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="time-labels">
+        <span>1:14</span>
+        <span id="song-streams">0 streams</span>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn-shuffle" id="fetch-btn" onclick="fetchLiveTrack()">
+        <span>🎲</span> Shuffle Vibe Check
+      </button>
+    </div>
+
+    <!-- Cold start notice for Render free tier -->
+    <div class="status-notice" id="cold-start-notice">
+      ⏳ <strong>Waking up Render backend...</strong><br>
+      Free tier instances spin down after inactivity and take ~20s to start.
+    </div>
+
+    <!-- Error message if backend is unreachable -->
+    <div class="error-box" id="error-banner">
+      <strong>⚠️ Unable to connect to Backend Server!</strong>
+      <p id="error-details">Make sure your backend is running locally (<code>node server.js</code>) or deployed to Render, and that your Backend URL above is set.</p>
+    </div>
+
+  </div>
+
+  <!-- Behind the Scenes: Code Inspector -->
+  <div class="inspector">
+    <button class="inspector-toggle" onclick="toggleInspector()">
+      <span>🔍 Inspect Live Data from Server</span>
+      <span id="inspector-arrow">▼</span>
+    </button>
+    <div class="inspector-body" id="inspector-data">
+// Click "Shuffle Vibe Check" to see the live JSON packet received from Render!
+    </div>
+  </div>
+
+  <!-- External JavaScript Script -->
+  <script src="script.js"></script>
+</body>
+</html>

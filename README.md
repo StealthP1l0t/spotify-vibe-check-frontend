@@ -8,7 +8,7 @@ Welcome to the **Spotify Vibe Check** project! This is a web application built w
 
 1. Log into [Vercel](https://vercel.com) using your GitHub account.
 2. Under **"Deploy your first project"**, click the **"Import"** button next to **Import Project** (or click **"+ Create New"** in the top-right).
-3. Under **"Import Git Repository"**, find your frontend repository (e.g. `spotify-vibe-check-frontend`) and click **"Import"**.
+3. Under **"Import Git Repository"**, find your forked frontend repository (`spotify-vibe-check-frontend`) and click **"Import"**.
 4. On the **New Project** configuration screen:
    * **Project Name**: ⚠️ **Important:** Change this to a unique name with your name in it (e.g., `spotify-vibe-alex` or `spotify-vibe-sarah`). *This determines your public web address!*
    * **Root Directory**: `./` (leave default)
@@ -23,6 +23,7 @@ Welcome to the **Spotify Vibe Check** project! This is a web application built w
 * **`index.html`**: The structure of the music player card, buttons, and display labels.
 * **`style.css`**: The design, colors (Spotify dark theme), fonts, and card animations.
 * **`script.js`**: The JavaScript code that picks a random song and updates the card when you click **"Shuffle Vibe Check"**.
+* **`lesson-2/`**: Contains the upgraded frontend files for **Lesson 2**.
 
 ---
 
@@ -54,4 +55,4 @@ Open `style.css` and try changing the `--spotify-green` variable at the top to y
 
 Right now, all our songs are saved directly in our `script.js` file.
 * *What happens if Spotify has over 100 million songs? Can we fit all of them inside one webpage on everyone's phone?*
-* In **Lesson 2**, we will connect this frontend to a separate **Music Server (Microservice)** in the cloud!
+* In **Lesson 2**, we will connect this frontend to a separate **Music Server (Microservice)** in the cloud using the files inside the `lesson-2/` folder!
