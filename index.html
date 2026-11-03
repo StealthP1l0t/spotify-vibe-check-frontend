@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Vibe Check — Lesson 1</title>
+  
+  <!-- Web Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- External CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="lesson-badge">
+      <span>💾</span> Lesson 1: Standalone Web App
+    </div>
+    <h1>Spotify Vibe Check</h1>
+    <p class="subtitle">Interactive music card running entirely in your browser</p>
+  </div>
+
+  <!-- Architecture Flow Visualizer -->
+  <div class="arch-bar">
+    <div class="arch-node">
+      <span>💻</span> Browser (HTML/CSS/JS)
+    </div>
+    <div class="arch-arrow">
+      ➔ JavaScript ➔
+    </div>
+    <div class="arch-node">
+      <span class="badge-status"></span>
+      <span>💾</span> In-Memory Array
+    </div>
+  </div>
+
+  <!-- Music Player Card -->
+  <div class="player-card">
+    
+    <!-- Album Art & Vibe Tag -->
+    <div class="album-art-wrapper">
+      <div class="album-art" id="album-cover">
+        🏠
+      </div>
+      <div class="vibe-tag" id="vibe-tag">
+        🕺 Upbeat & Nostalgic
+      </div>
+    </div>
+
+    <!-- Song Info -->
+    <div class="track-details">
+      <div class="track-title" id="song-title">As It Was</div>
+      <div class="track-artist" id="song-artist">Harry Styles</div>
+      <div class="track-meta">
+        <span id="song-album">💿 Harry's House</span>
+        <span id="song-year">📅 2022</span>
+      </div>
+    </div>
+
+    <!-- Progress Bar Decoration -->
+    <div class="progress-bar-container">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="time-labels">
+        <span>1:14</span>
+        <span id="song-streams">3.4 Billion streams</span>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn-shuffle" id="shuffle-btn" onclick="shuffleTrack()">
+        <span>🎲</span> Shuffle Vibe Check
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Behind the Scenes: Code Inspector -->
+  <div class="inspector">
+    <button class="inspector-toggle" onclick="toggleInspector()">
+      <span>🔍 Inspect Song Data Object</span>
+      <span id="inspector-arrow">▼</span>
+    </button>
+    <div class="inspector-body" id="inspector-data">
+// Click "Shuffle Vibe Check" to see the track data object!
+    </div>
+  </div>
+
+  <!-- External JavaScript Script -->
+  <script src="script.js"></script>
+</body>
+</html>
