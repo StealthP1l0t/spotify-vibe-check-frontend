@@ -7,10 +7,14 @@ Welcome to the **Spotify Vibe Check** project! This is a web application built w
 ## 🚀 How to Deploy on Vercel
 
 1. Log into [Vercel](https://vercel.com) using your GitHub account.
-2. Click **"Add New..."** ➔ **"Project"**.
-3. Find this repository and click **"Import"**.
-4. Leave all default settings as they are, and click **"Deploy"**.
-5. In ~10 seconds, your site is live! You can open the link on your laptop, tablet, or smartphone!
+2. Under **"Deploy your first project"**, click the **"Import"** button next to **Import Project** (or click **"+ Create New"** in the top-right).
+3. Under **"Import Git Repository"**, find your frontend repository (e.g. `spotify-vibe-check-frontend`) and click **"Import"**.
+4. On the **New Project** configuration screen:
+   * **Project Name**: ⚠️ **Important:** Change this to a unique name with your name in it (e.g., `spotify-vibe-alex` or `spotify-vibe-sarah`). *This determines your public web address!*
+   * **Root Directory**: `./` (leave default)
+   * **Application Preset**: `Other` (leave default)
+   * Click the white **"Deploy"** button at the bottom.
+5. In ~10 seconds, your site is live! You will get your own unique link (e.g. `https://spotify-vibe-alex.vercel.app`) that you can open on your phone or share with classmates!
 
 ---
 
@@ -25,7 +29,7 @@ Welcome to the **Spotify Vibe Check** project! This is a web application built w
 ## 🎨 Fun Customization Challenges
 
 ### 1. Add Your Favorite Songs
-Open `script.js` and look for the `songs` list:
+Open `script.js` on GitHub (click the ✏️ pencil icon to edit) and look for the `songs` list:
 ```javascript
 {
   id: 8,
@@ -39,7 +43,7 @@ Open `script.js` and look for the `songs` list:
   emoji: "🎵"
 }
 ```
-Add your own song objects, commit the changes on GitHub, and watch Vercel update your website!
+Add your own song objects, click **"Commit changes"** on GitHub, and watch Vercel automatically update your live website!
 
 ### 2. Change the Theme Colors
 Open `style.css` and try changing the `--spotify-green` variable at the top to your favorite neon color (e.g. `#ff2a85` for neon pink or `#00f0ff` for electric cyan).
